@@ -1,0 +1,39 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.topnav {
+  background: white;
+  z-index: 999;
+  
+}
+
+.topnav .nav-links .nav-link {
+  color: #050505 !important;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: 0.3s ease;
+}
+
+.topnav .nav-links .nav-link:hover {
+  color: #ffeb3b !important;
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Make topnav sticky */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  
+}

@@ -1,0 +1,193 @@
+/* ---------- Shop Content Section ---------- */
+.shop-content-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  background-image: url('../images/banner2.jpg'); /* Banner image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Overlay for better readability */
+.shop-content-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); /* Dark overlay */
+  z-index: 0;
+}
+
+/* Container inside section */
+.shop-content-section .containerr {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Banner */
+.shop-banner {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.shop-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.shop-banner p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.shop-btn {
+  background-color: #e63946; /* Red button */
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #d62828;
+  transform: translateY(-3px);
+}
+
+/* Featured Categories */
+.categories-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.categories-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.categories-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.category-box {
+  width: 220px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.category-img {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* If you want Fruits image inline */
+.category-box:first-child .category-img {
+  background-image: url('../images/fruitss.webp');
+}
+
+.category-box h3 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Featured Products Section */
+.featured-section {
+  margin-top: 80px;
+  text-align: center;
+  color: #fff;
+}
+
+.featured-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.featured-section p {
+  margin-bottom: 25px;
+}
+
+.featured-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.featured-list li {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.featured-list li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Call to Action */
+.shop-cta {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.shop-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.shop-cta p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .shop-banner h1 {
+    font-size: 2.5rem;
+  }
+  .categories-row {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-banner h1 {
+    font-size: 2rem;
+  }
+  .categories-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

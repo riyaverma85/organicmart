@@ -1,0 +1,166 @@
+/* 🌿 OrganicMart Footer Design */
+.footer {
+  background:black;
+  color: #064e3b;;
+  padding: 60px 20px 25px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌿 Footer Grid Layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🌿 Footer Section Styling */
+.footer-section h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  color: #86efac;
+  font-weight: 700;
+}
+
+.footer-section h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #a7f3d0;
+  border-left: 4px solid #10b981;
+  padding-left: 10px;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: #e7fdf5;
+  line-height: 1.6;
+}
+
+/* 📍 Address section */
+.footer-section .address {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #bbf7d0;
+}
+
+/* 🌿 Quick Links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #d1fae5;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #34d399;
+  padding-left: 5px;
+}
+
+/* 🌿 Newsletter */
+.newsletter p {
+  color: #ccfbf1;
+  font-size: 0.95rem;
+}
+
+.newsletter form {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #f0fdf4;
+  color: #065f46;
+  font-size: 0.95rem;
+}
+
+.newsletter button {
+  background: linear-gradient(90deg, #10b981, #059669);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: linear-gradient(90deg, #059669, #10b981);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* 🌿 Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #d1fae5;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #34d399;
+  transform: scale(1.2);
+}
+
+/* 🌿 Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  color: #a7f3d0;
+}
+
+/* 🌿 Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 15px 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
