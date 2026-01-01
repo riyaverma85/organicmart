@@ -4,15 +4,19 @@ const User = require('../models/User');
 
 exports.protect = async (req, res, next) => {
   const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith('Bearer '))
-    return res.status(401).json({ message: 'Not authorized' });
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ message: 'Not authorized, no token' });
+  }
 
   const token = authHeader.split(' ')[1];
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.findById(decoded.id).select('-password');
-    if (!user) return res.status(401).json({ message: 'Not authorized' });
-    req.user = user;
+    if (!user) return res.status(401).json({ message: 'User not found' });
+
+    // 👇 Token ka role preserve karne ke liye
+    req.user = { ...user.toObject(), role: decoded.role || user.role };
+
     next();
   } catch (err) {
     return res.status(401).json({ message: 'Token invalid' });
@@ -20,6 +24,8 @@ exports.protect = async (req, res, next) => {
 };
 
 exports.adminOnly = (req, res, next) => {
-  if (req.user?.role !== 'admin') return res.status(403).json({ message: 'Admin only' });
+  if (req.user?.role !== 'admin') {
+    return res.status(403).json({ message: 'Admin only access' });
+  }
   next();
 };
