@@ -1,7 +1,7 @@
 .admin-dashboard {
   display: flex;
   min-height: 100vh;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 /* Sidebar */
@@ -40,13 +40,14 @@
   background: #146c43;
 }
 
+/* Main area */
 .main-content {
   flex: 1;
   padding: 20px;
   background: #f9f9f9;
 }
 
-/* Cards and grids */
+/* Cards */
 .stats-cards {
   display: flex;
   gap: 20px;
@@ -63,6 +64,7 @@
   min-width: 200px;
 }
 
+/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -98,41 +100,42 @@ button:hover {
   background: #157347;
 }
 
-/* ✅ Responsive Design for Phones */
+/* ✅ Responsive for mobile */
 @media (max-width: 768px) {
   .admin-dashboard {
-    flex-direction: column;
+    flex-direction: column; /* Sidebar on top */
   }
 
   .sidebar {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    white-space: nowrap;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-
-  .sidebar h2 {
-    display: none;
+    text-align: center;
+    padding: 10px;
   }
 
   .sidebar ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
   }
 
   .sidebar li {
-    flex: 1;
-    text-align: center;
+    width: 100%;
     padding: 12px;
-    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
   .main-content {
     width: 100%;
     padding: 15px;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
